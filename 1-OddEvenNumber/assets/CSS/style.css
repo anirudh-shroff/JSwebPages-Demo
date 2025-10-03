@@ -1,0 +1,34 @@
+.interactionPanel{
+    padding: 10px;
+    margin: auto;
+    width: 600px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.btnCB{
+    border-radius: 15px;
+    border-color: #0d6efd;
+    width: 100px;
+    height: auto;
+    background-color: #0d6efd;
+    color: white;
+    transition: all 0.1s linear;
+}
+.btnCB:hover{
+    background-color: white;
+    color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btnCB:active{
+    transform: translateY(2px);
+    border-color: #0d6efd;
+    background-color: #0d6efd;
+    color: white;
+}
+
+.no-arrow::-webkit-inner-spin-button,
+.no-arrow::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
