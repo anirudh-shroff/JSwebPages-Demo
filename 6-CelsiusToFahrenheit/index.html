@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="radio" name="temp" id="celcius">
+        <label for="celcius">Celcius</label>
+        <input type="radio" name="temp" id="ferhenheit">
+        <label for="ferhenheit">Ferhenheit</label>
+    </div>
+    <br>
+    <div>
+        <label for="inp1">Enter value here :</label>
+        <input type="text" id="inp1">
+    </div>
+    <br>
+    <div>
+        <label for="ans">answer is :</label>
+        <input type="text" disabled id="ans">
+    </div>
+    <br>
+    <button id="conv">Convert</button>
+</body>
+
+<script>
+    document.getElementById("conv").addEventListener("click", () => {
+        const C = document.getElementById("celcius").checked;
+        const F = document.getElementById("ferhenheit").checked;
+        let ans = document.getElementById("ans");
+        let inp1 = document.getElementById("inp1").value;
+
+        if (C) {
+            ans.value = (inp1 * (9 / 5)) + 32;
+        } else if (F) {
+            ans.value = (inp1 - 32) * (5 / 9);
+        } else{
+            ans.value = `please select a unit and enter a value`;
+        }
+    })
+</script>
+
+</html>
