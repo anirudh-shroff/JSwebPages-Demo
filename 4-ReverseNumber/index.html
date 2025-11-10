@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label for="inp1">Enter a number here to reverse it : </label>
+        <input type="text" id="inp1">
+    </div>
+
+    <br>
+    
+    <button id="rev">Click here</button>
+    
+    <br>
+    
+    <div>
+        <h3 id="ans"></h3>
+    </div>
+</body>
+
+<script>
+    document.getElementById("rev").addEventListener("click",() => {
+        let num = parseInt(document.getElementById("inp1").value);
+        let originalNum = num
+        let revs = 0;
+        let count = 0;
+
+        while(num > 0){
+            let a = num % 10;
+            revs = revs * 10 + a;
+            num = parseInt(num/10);
+            count++;     
+        }
+        console.log(count)
+        //to count the number of digits in a number
+        document.getElementById("ans").innerHTML = `The reverse of ${originalNum} is : ${revs}`
+    })
+</script>
+</html>
