@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label for="inp1">Enter a number here to fond sum of all it's digits : </label>
+        <input type="text" id="inp1">
+    </div>
+
+    <br>
+
+    <button id="sum">Click here</button>
+
+    <br>
+
+    <div>
+        <h3 id="ans"></h3>
+    </div>
+</body>
+<script>
+    document.getElementById("sum").addEventListener("click", () => {
+        let num = document.getElementById("inp1").value;
+        let sum = 0;
+
+        if (num > 0) {
+            while (num > 0) {
+                let digit = num % 10;
+                sum = sum + digit;
+                num = (num - digit) / 10
+                console.log(sum)
+                console.log(num)
+            }
+            document.getElementById("ans").innerHTML = `sum of all digits is : ${sum}`
+        } else {
+            document.getElementById("ans").innerHTML = `enter a  valid number, should be greater than 0`
+        }
+    })
+</script>
+
+</html>
