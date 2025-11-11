@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label for="inp1">Enter value here :</label>
+        <input type="text" id="inp1">
+    </div>
+    <br>
+    <div >
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        <p>table</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody id="ans">
+
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <button id="clk">click me</button>
+    <button id="reset">reset</button>
+</body>
+
+<script>
+    document.getElementById("clk").addEventListener("click", () => {
+        let inp1 = parseInt(document.getElementById("inp1").value);
+        let ans = document.getElementById("ans");
+        let val = "";
+
+         for (let n = 1; n <= 10; n++) {
+           val += 
+                `<tr>
+                    <td>
+                        ${inp1} x ${n} = ${inp1 * n}
+                    </td>
+                </tr>`
+            
+        }
+        ans.innerHTML = `${val}`
+    })
+    document.getElementById("reset").addEventListener("click",() => {
+        inp1.value = "";
+        ans.innerHTML = "";
+    })
+</script>
+
+</html>
