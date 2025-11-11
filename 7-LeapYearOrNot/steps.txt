@@ -1,0 +1,14 @@
+Que 7. Create a webpage to check if a given year is a Leap Year or not.
+
+* Html part :
+        1 - Create an input box for the user input one for celcius and one for ferhenheit(Give ID to the input box).
+        2 - Create a button for triggering the calculation part (give ID to the button).
+        3 - Show the output in h1 (give an ID to h1)
+    
+* JS part :
+        1 - target the button using ID
+        2 - Add event listener to the button
+        3 - Create a variable to store the input from the input box in html using the ID and convert it into number format from string format
+        4 - initialise And store the converstion of values in another variable.
+        5 - And run a loop till the total sum.
+        6 - Show the answer in h1 by using it's ID

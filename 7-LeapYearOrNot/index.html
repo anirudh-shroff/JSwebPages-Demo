@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label for="inp1">Enter value here :</label>
+        <input type="text" id="inp1">
+    </div>
+    <br>
+    <div>
+        <label for="ans">answer is :</label>
+        <input type="text" disabled id="ans">
+    </div>
+    <br>
+    <button id="chk">Check</button>
+</body>
+<script>
+    document.getElementById("chk").addEventListener("click", () => {
+        let inp1 = parseInt(document.getElementById("inp1").value);
+        let ans = document.getElementById("ans");
+        if (isNaN(inp1)) {
+            ans.value = `Please enter a valid numeric value`
+        } else {
+            (inp1 % 4 === 0) && (inp1 % 100 !== 0 || inp1 % 400 === 0)
+                ? ans.value = `${inp1} is a leap year`
+                // console.log("it's a leap year")
+                : ans.value = `${inp1} is not a leap year`
+            // console.log("not a leap year")
+        }
+
+
+
+        // (inp1 % 4 === 0)
+        //     ? (((inp1 % 100 === 0) && (inp1 % 400 === 0))
+        //         ? console.log("It's a leap year")
+        //         : console.log("not leap year"))
+        //     : console.log("not a leap year");
+    })
+</script>
+
+</html>
