@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label for="inp1">Enter a number here to find if it's a prime number : </label>
+        <input type="text" id="inp1">
+    </div>
+    <div>
+        <label for="ans">Answer is : </label>
+        <input type="text" id="ans" disabled>
+    </div>
+
+    <br>
+
+    <button id="clk">Click here</button>
+</body>
+
+<script>
+    document.getElementById("clk").addEventListener("click", () => {
+        let inp1 = parseInt(document.getElementById("inp1").value);
+        let ans = document.getElementById("ans");
+        let b = true
+
+        for (let n = 2; n < inp1; n++) {
+            if (inp1 % n === 0) {
+                b = false;
+                break;
+            }
+        }
+
+        if (b === true) {
+            ans.value = `it's a prime no`
+        } else {
+            ans.value = `not a prime no`
+        }
+    })
+</script>
+
+</html>
